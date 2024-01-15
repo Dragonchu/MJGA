@@ -25,6 +25,7 @@ class Test {
 
 void main() throws Exception{
     System.out.println("当前类名: "+ this.getClass().getName());
+    System.out.println("================");
 
     System.out.println("调用无参构造函数");
     System.out.println("<======结果=====");
@@ -48,12 +49,12 @@ void main() throws Exception{
 
     System.out.println("使用Class.forName");
     System.out.println("<======结果=====");
-    var clz2 = Class.forName("ClassLoad$Test");
+    var clz2 = Class.forName("ExploreClassLoad$Test");
     System.out.println("===============>");
 
     System.out.println("使用Class.forName并使用newInstance");
     System.out.println("<======结果=====");
-    var clz3 = Class.forName("ClassLoad$Test");
+    var clz3 = Class.forName("ExploreClassLoad$Test");
     var test3 = clz3.getDeclaredConstructor(this.getClass()).newInstance(this.getClass().newInstance());
     System.out.println("===============>");
 }
